@@ -1,5 +1,6 @@
     const jsonData = fetch("../../data/photographers.json");
-    console.log(jsonData);
+    const jsonJs = JSON.parse("../../data/photographers.json");
+    console.log(jsonJs);
     
     class photographers {
         constructor() {
