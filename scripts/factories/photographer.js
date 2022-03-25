@@ -1,4 +1,14 @@
-function photographerFactory(data) {
+class photographerFactory {
+    constructor(data, type) {
+        if (type === "json") {
+            console.log(photographers(data))
+            return photographers(data)
+        } else {
+            throw "Unknow format type"
+        }
+    }
+}
+/*function photographerFactory(data) {
     const { name, portrait } = data;
 
     const picture = `assets/photographers/${portrait}`;
@@ -15,3 +25,6 @@ function photographerFactory(data) {
     }
     return { name, picture, getUserCardDOM }
 }
+
+const datajson = ("/data/photographers.json");
+console.log(datajson); */

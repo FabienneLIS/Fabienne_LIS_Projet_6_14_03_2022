@@ -1,14 +1,23 @@
-    async function getPhotographers() {
+    const jsonData = fetch("../../data/photographers.json");
+    console.log(jsonData);
+    
+    class photographers {
+        constructor() {
+            this.photographersList = new Api("../../data/photographers.json");
+            console.log(this.photographersList);
+        }
+    }
+    /*async function getPhotographers() {
         // Penser à remplacer par les données récupérées dans le json
         const photographers = [
             {
-                "name": "Ma data test",
-                "id": 1,
-                "city": "Paris",
-                "country": "France",
-                "tagline": "Ceci est ma data test",
+                "name": "Mimi Keel",
+                "id": 243,
+                "city": "London",
+                "country": "UK",
+                "tagline": "Voir le beau dans le quotidien",
                 "price": 400,
-                "portrait": "account.png"
+                "portrait": "MimiKeel.jpg"
             },
             {
                 "name": "Autre data test",
@@ -41,5 +50,4 @@
         displayData(photographers);
     };
     
-    init();
-    
+    init();*/
