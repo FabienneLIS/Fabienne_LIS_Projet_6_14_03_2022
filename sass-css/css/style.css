@@ -3,6 +3,11 @@ body {
   font-family: "DM Sans", sans-serif;
   margin: 0;
 }
+@media screen and (max-width: 1800px) {
+  body {
+    width: 1800px;
+  }
+}
 
 .header {
   display: flex;
@@ -34,7 +39,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 28%;
+  width: 530px;
   height: 30%;
   margin: 2%;
   padding-left: 2px;
@@ -52,7 +57,7 @@ body {
   font-size: 36px;
 }
 .photographer__section__article__localisation {
-  color: #D3573C;
+  color: #8a321f;
 }
 .photographer__section__article__tagline {
   font-weight: bold;

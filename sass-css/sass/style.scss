@@ -1,8 +1,25 @@
 @import url("photographer.css");
 
+//média queries
+$breakpointsmax:
+(max: 1800px);
+
+
+@mixin max-only {
+    @media screen and (max-width: map-get($breakpointsmax, max)){
+        @content;
+    }
+  }
+
+
+//page
+
 body {
     font-family: "DM Sans", sans-serif;
     margin: 0;
+    @include max-only {
+        width: 1800px;
+    }
 }
 
 
@@ -36,12 +53,12 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 28%;
+        width: 530px;
         height: 30%;
         margin: 2%;
         padding-left: 2px;
         padding-bottom: 0px;
-        
+     
         &__img {
             height: 15em;
             width: 15em;
@@ -55,7 +72,7 @@ body {
             
         }
         &__localisation {
-            color: #D3573C;
+            color: darken(#D3573C, 20%);
         }
         &__tagline {
             font-weight: bold;

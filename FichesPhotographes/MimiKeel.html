@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../sass-css/css/photographers.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     <title>Fisheye - photographe </title>
   </head>
+
   <body>
     <header>
       <a href="../index.html">
         <img src="../assets/images/logo.png" class="logo" />
       </a>
     </header>
+
     <main id="main">
+
       <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <div>
+          <h2 class="photograph-header__h2" id="243">Mimi Keel</h2>
+          <p class="photograph-header__localisation">London, UK</p>
+          <p class="photograph-header__tagline">Voir le beau dans le quotidien</p>
+        </div>
+        <div>
+          <button class="photograph-header__contact_button" onclick="displayModal()">Contactez-moi</button>
+        </div>
+        <div>
+          <img class="photograph-header__img" src="../photos/Mimi/Portrait_Nora.jpg" alt="">
+        </div>
       </div>
+      <section>
+
+      </section>
     </main>
+
     <div id="contact_modal">
 			<div class="modal">
 				<header>
+          
           <h2>Contactez-moi</h2>
           <img src="../assets/icons/close.svg" onclick="closeModal()" />
         </header>
