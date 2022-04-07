@@ -45,6 +45,10 @@ body {
   padding-left: 2px;
   padding-bottom: 0px;
 }
+.photographer__section__article a {
+  text-decoration: none;
+  text-align: center;
+}
 .photographer__section__article__img {
   height: 15em;
   width: 15em;

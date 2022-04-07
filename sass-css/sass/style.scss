@@ -58,7 +58,10 @@ body {
         margin: 2%;
         padding-left: 2px;
         padding-bottom: 0px;
-     
+        a {
+            text-decoration: none;
+            text-align: center;
+        }
         &__img {
             height: 15em;
             width: 15em;
