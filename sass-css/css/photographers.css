@@ -6,7 +6,8 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 
-h2, p {
+h2,
+p {
   color: black;
 }
 
@@ -14,25 +15,25 @@ header img {
   font-size: 5em;
 }
 
-.photograph-header {
-  background-color: #FAFAFA;
+.photographer__main__header {
+  background-color: #fafafa;
   height: 300px;
   margin: 0 100px;
-  color: #901C1C;
+  color: #901c1c;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.photograph-header__h2 {
-  color: #D3573C;
+.photographer__main__header .photographer__main__header__name {
+  color: #d3573c;
   font-size: 4em;
 }
-.photograph-header__localisation {
+.photographer__main__header .photographer__main__header__location {
   font-size: 20px;
   color: #8a321f;
 }
-.photograph-header__contact_button {
+.photographer__main__header .photographer__main__header__contactButton {
   font-size: 20px;
   font-weight: bold;
   color: white;
@@ -40,33 +41,33 @@ header img {
   width: 170px;
   height: 70px;
   border: none;
-  background-color: #901C1C;
+  background-color: #901c1c;
   border-radius: 5px;
   cursor: pointer;
 }
-.photograph-header__contact_button:hover {
-  background-color: #DB8876;
+.photographer__main__header .photographer__main__header__contactButton:hover {
+  background-color: #db8876;
 }
-.photograph-header__img {
+.photographer__main__header .photographer__main__header__picture {
   height: 15em;
   width: 15em;
   border-radius: 10em;
   object-fit: cover;
   background-size: cover;
 }
-.photograph-header h2 {
+.photographer__main__header h2 {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.photograph-header p {
+.photographer__main__header p {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-section {
+.gallery {
   width: 100%;
 }
-section p {
+.gallery .gallery__select {
   width: auto;
   text-align: left;
   font-size: 1.5em;
@@ -77,7 +78,7 @@ section p {
   margin-bottom: 5%;
 }
 
-.itemphotographer {
+.gallery__media {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -88,13 +89,13 @@ section p {
   width: 100%;
   overflow: hidden;
 }
-.itemphotographer .items__photo {
+.gallery__media .gallery__media__items .gallery__media__items__photo {
   height: 500px;
   width: 500px;
   object-fit: cover;
   overflow: hidden;
 }
-.itemphotographer .items__legend {
+.gallery__media .gallery__media__items .gallery__media__items__legend {
   display: grid;
   grid-template-columns: 4fr 2fr 1fr;
   align-items: start;
@@ -102,22 +103,22 @@ section p {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.itemphotographer .items__legend__text {
+.gallery__media .gallery__media__items .gallery__media__items__legend .gallery__media__items__legend__text {
   font-size: 1.2em;
   letter-spacing: 3px;
   margin-top: 0px;
   margin-bottom: 0px;
-  color: #901C1C;
+  color: #901c1c;
 }
-.itemphotographer .items__legend__number {
+.gallery__media .gallery__media__items .gallery__media__items__legend .gallery__media__items__legend__number {
   justify-self: right;
   font-size: 1.2em;
   letter-spacing: 2px;
   margin-top: 0px;
   margin-bottom: 0px;
-  color: #901C1C;
+  color: #901c1c;
 }
-.itemphotographer .items__legend__like {
+.gallery__media .gallery__media__items .gallery__media__items__legend .gallery__media__items__legend__like {
   position: relative;
   justify-self: center;
   align-self: center;
@@ -128,12 +129,12 @@ section p {
   height: 30px;
   margin-top: 0 px;
   margin-bottom: 0px;
-  color: #901C1C;
+  color: #901c1c;
   cursor: pointer;
   z-index: 1;
   animation: heart 1s forwards;
 }
-.itemphotographer .items__legend__liked {
+.gallery__media .gallery__media__items .gallery__media__items__legend .gallery__media__items__legend__liked {
   position: relative;
   top: 0px;
   right: 10%;
@@ -148,14 +149,6 @@ section p {
   z-index: -1;
 }
 
-@keyframes heart {
-  0% {
-    z-index: 1;
-  }
-  100% {
-    z-index: -1;
-  }
-}
 .contact_modal {
   position: fixed;
   top: 0;
@@ -163,8 +156,7 @@ section p {
   left: 0;
   right: 0;
   transform-origin: center;
-  background-color: white;
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.745);
   height: 100vh;
   width: 100vw;
 }
@@ -172,12 +164,11 @@ section p {
   border-radius: 5px;
   background-color: #db8876;
   width: 30%;
-  height: 80vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   align-content: flex-start;
-  opacity: 1;
   justify-content: space-between;
   padding: 10px;
   margin: auto;
@@ -192,17 +183,18 @@ section p {
   width: 98%;
   padding: 2%;
 }
-.modal_header h2 {
+.modal_header .modal_header-contactName {
   font-size: 40px;
   font-weight: normal;
   text-align: left;
   margin: 2px;
+  padding-left: 10px;
 }
-.modal_header h2 p {
+.modal_header .modal_header-contactName p {
   padding: 0px;
   margin: 0px;
 }
-.modal_header img {
+.modal_header .modal_header-close {
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -212,7 +204,7 @@ section p {
 
 form {
   display: flex;
-  width: 80%;
+  width: 90%;
   margin: auto;
   flex-direction: column;
   align-items: flex-start;
@@ -225,7 +217,7 @@ form div {
   margin-bottom: 26px;
 }
 form div label {
-  color: #312E2E;
+  color: #312e2e;
   font-size: 30px;
 }
 form div input {
@@ -235,6 +227,7 @@ form div input {
   height: 40px;
   border: none;
   border-radius: 5px;
+  font-size: 18px;
 }
 form div textarea {
   margin-left: auto;
@@ -243,6 +236,25 @@ form div textarea {
   height: 140px;
   border: none;
   border-radius: 5px;
+  font-size: 18px;
+  overflow: auto;
+}
+
+.valid-input {
+  border: 4px solid #30f25aba;
+  inset: 0px 0px 30px 0px #30f25aba;
+}
+
+.error-input {
+  border: 4px solid #f23046ba;
+  inset: 0px 0px 30px 0px #f23046ba;
+}
+
+.error-text {
+  color: red;
+  font-size: 1.2em;
+  margin-top: 1px;
+  margin-bottom: 5px;
 }
 
 .contact_button {
@@ -253,7 +265,7 @@ form div textarea {
   width: 170px;
   height: 70px;
   border: none;
-  background-color: #901C1C;
+  background-color: #901c1c;
   border-radius: 5px;
   cursor: pointer;
 }

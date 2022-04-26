@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="sass-css/css/photographers.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fisheye - photographe</title>
+  </head>
+  <body>
+    <header>
+      <img src="assets/images/logo.png" class="logo" />
+    </header>
+
+    <main id="main" class="photographer__main">
+      <div class="photographer__main__header">
+        <div>
+          <h2 class="photographer__main__header__name" id="243"></h2>
+          <p class="photographer__main__header__location"></p>
+          <p class="photographer__main__header__tagline"></p>
+        </div>
+        <div>
+          <button class="photographer__main__header__contactButton">
+            Contactez-moi
+          </button>
+        </div>
+        <div>
+          <img class="photographer__main__header__picture" src="" alt="" />
+        </div>
+      </div>
+
+      <section class="gallery">
+        <p class="gallery__select">Trier par</p>
+        <section class="gallery__media"></section>
+      </section>
+    </main>
+
+    <div id="contact_modal" class="contact_modal">
+      <div class="modal">
+        <header class="modal_header">
+          <h2 class="modal_header-contactName">
+            <p>Contactez-moi</p>
+            <p>Mimi Keel</p>
+          </h2>
+          <img class="modal_header-close" src="assets/icons/close.svg" />
+        </header>
+
+        <form>
+          <div>
+            <label>Prénom</label>
+            <input type="texte" name="" class="firstName" id="" />
+          </div>
+          <span class="error-text errorFirstName"></span>
+          <div>
+            <label>Nom</label>
+            <input type="texte" name="" class="lastName" id="" />
+          </div>
+          <span class="error-text errorLastName"></span>
+          <div>
+            <label>Email</label>
+            <input type="email" class="email" name="" id="" />
+          </div>
+          <span class="error-text errorEmail"></span>
+          <span></span>
+          <div>
+            <label>Votre message</label>
+            <textarea name="" id=""></textarea>
+          </div>
+
+          <button class="contact_button">Envoyer</button>
+        </form>
+      </div>
+    </div>
+    <script src="scripts/pages/pagePhotographer.js"></script>
+    <script src="scripts/pages/indexCard.js"></script>
+    <script src="scripts/utils/contactForm.js"></script>
+  </body>
+</html>
