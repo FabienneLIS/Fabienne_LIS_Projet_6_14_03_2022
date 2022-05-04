@@ -13,6 +13,7 @@ p {
 
 header img {
   font-size: 5em;
+  margin-bottom: 50px;
 }
 
 .photographer__main__header {
@@ -64,10 +65,10 @@ header img {
   margin-bottom: 30px;
 }
 
-.gallery {
+.photographer__main__gallery {
   width: 100%;
 }
-.gallery .gallery__select {
+.photographer__main__gallery .photographer__main__gallery__select {
   width: auto;
   text-align: left;
   font-size: 1.5em;
@@ -78,7 +79,7 @@ header img {
   margin-bottom: 5%;
 }
 
-.gallery__media {
+.photographer__main__gallery__media {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -89,13 +90,13 @@ header img {
   width: 100%;
   overflow: hidden;
 }
-.gallery__media .gallery__media__items .gallery__media__items__photo {
+.photographer__main__gallery__media .photographer__main__gallery__media__items .gallery__media__items__photo {
   height: 500px;
   width: 500px;
   object-fit: cover;
   overflow: hidden;
 }
-.gallery__media .gallery__media__items .gallery__media__items__legend {
+.photographer__main__gallery__media .photographer__main__gallery__media__items .gallery__media__items__legend {
   display: grid;
   grid-template-columns: 4fr 2fr 1fr;
   align-items: start;
@@ -103,14 +104,14 @@ header img {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.gallery__media .gallery__media__items .gallery__media__items__legend .gallery__media__items__legend__text {
+.photographer__main__gallery__media .photographer__main__gallery__media__items .gallery__media__items__legend .gallery__media__items__legend__text {
   font-size: 1.2em;
   letter-spacing: 3px;
   margin-top: 0px;
   margin-bottom: 0px;
   color: #901c1c;
 }
-.gallery__media .gallery__media__items .gallery__media__items__legend .gallery__media__items__legend__number {
+.photographer__main__gallery__media .photographer__main__gallery__media__items .gallery__media__items__legend .gallery__media__items__legend__number {
   justify-self: right;
   font-size: 1.2em;
   letter-spacing: 2px;
@@ -118,7 +119,7 @@ header img {
   margin-bottom: 0px;
   color: #901c1c;
 }
-.gallery__media .gallery__media__items .gallery__media__items__legend .gallery__media__items__legend__like {
+.photographer__main__gallery__media .photographer__main__gallery__media__items .gallery__media__items__legend .gallery__media__items__legend__like {
   position: relative;
   justify-self: center;
   align-self: center;
@@ -134,7 +135,7 @@ header img {
   z-index: 1;
   animation: heart 1s forwards;
 }
-.gallery__media .gallery__media__items .gallery__media__items__legend .gallery__media__items__legend__liked {
+.photographer__main__gallery__media .photographer__main__gallery__media__items .gallery__media__items__legend .gallery__media__items__legend__liked {
   position: relative;
   top: 0px;
   right: 10%;

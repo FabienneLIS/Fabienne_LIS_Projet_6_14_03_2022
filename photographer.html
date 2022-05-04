@@ -16,13 +16,15 @@
   </head>
   <body>
     <header>
-      <img src="assets/images/logo.png" class="logo" />
+      <a href="index.html">
+        <img src="assets/images/logo.png" class="logo" />
+      </a>
     </header>
 
     <main id="main" class="photographer__main">
       <div class="photographer__main__header">
         <div>
-          <h2 class="photographer__main__header__name" id="243"></h2>
+          <h2 class="photographer__main__header__name"></h2>
           <p class="photographer__main__header__location"></p>
           <p class="photographer__main__header__tagline"></p>
         </div>
@@ -36,9 +38,9 @@
         </div>
       </div>
 
-      <section class="gallery">
-        <p class="gallery__select">Trier par</p>
-        <section class="gallery__media"></section>
+      <section class="photographer__main__gallery">
+        <p class="photographer__main__gallery__select">Trier par</p>
+        <section class="photographer__main__gallery__media"></section>
       </section>
     </main>
 
@@ -78,8 +80,10 @@
         </form>
       </div>
     </div>
-    <script src="scripts/pages/pagePhotographer.js"></script>
-    <script src="scripts/pages/indexCard.js"></script>
+    <script src="scripts/pages/photographerProfileCard.js"></script>
+    <script src="scripts/factories/photographerProfilCardFactory.js"></script>
+    <script src="scripts/pages/photographerMedia.js"></script>
+    <script src="scripts/factories/photographerMediaFactory.js"></script>
     <script src="scripts/utils/contactForm.js"></script>
   </body>
 </html>

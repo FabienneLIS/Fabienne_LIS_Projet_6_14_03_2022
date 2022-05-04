@@ -12,7 +12,7 @@ function photographerFactory(photographer) {
     liElement.classList.add("photographer__section__ul__li");
 
     const linkElement = document.createElement("a");
-    linkElement.setAttribute("href", `./Photographer.html?id=${id}`);
+    linkElement.setAttribute("href", `./photographer.html?id=${id}`);
     linkElement.classList.add("photographer__section__ul__li__a");
 
     const img = document.createElement("img"); // crée l'élément image

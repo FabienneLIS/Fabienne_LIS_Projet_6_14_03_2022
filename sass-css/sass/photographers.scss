@@ -13,6 +13,7 @@ p {
 header {
   img {
     font-size: 5em;
+    margin-bottom: 50px;
   }
 }
 
@@ -66,9 +67,9 @@ header {
 }
 
 //photos, vidéos
-.gallery {
+.photographer__main__gallery {
   width: 100%;
-  .gallery__select {
+  .photographer__main__gallery__select {
     width: auto;
     text-align: left;
     font-size: 1.5em;
@@ -79,7 +80,7 @@ header {
     margin-bottom: 5%;
   }
 }
-.gallery__media {
+.photographer__main__gallery__media {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -90,7 +91,7 @@ header {
   width: 100%;
   overflow: hidden;
 
-  .gallery__media__items {
+  .photographer__main__gallery__media__items {
     .gallery__media__items__photo {
       height: 500px;
       width: 500px;
