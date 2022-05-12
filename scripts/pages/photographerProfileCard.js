@@ -1,4 +1,9 @@
-const photographerCurrentId = new URL(document.location).searchParams.get("id");
+function photographerCurrentID() {
+  const photographerCurrentId = new URL(document.location).searchParams.get(
+    "id"
+  );
+  return photographerCurrentId;
+}
 
 const getPhotographer = async () => {
   // Penser à remplacer par les données récupérées dans le json
@@ -7,58 +12,47 @@ const getPhotographer = async () => {
     //récupère la requête au format json, ce resultat est une promise
     .then((data) => {
       // on récupère sa vrai valeur ici
-      console.log("avant", data.photographers);
+      /*console.log("avant", data.photographers);*/
       const photographer = data.photographers.find(
-        (photographer) => photographerCurrentId === photographer.id.toString()
+        (photographer) => photographerCurrentID() === photographer.id.toString()
       );
-      console.log("après", photographer);
-      document.querySelector(".photographer__main__header__name").textContent =
-        photographer.name;
-
-      document.querySelector(
-        ".photographer__main__header__location"
-      ).textContent = `${photographer.city}, ${photographer.country}`;
-
-      document.querySelector(
-        ".photographer__main__header__tagline"
-      ).textContent = photographer.tagline;
-
-      const picture = `photos/photographers_portraits/${photographer.portrait}`;
-
-      document
-        .querySelector(".photographer__main__header__picture")
-        .setAttribute("src", picture);
+      /*console.log("après", photographer);*/
+      return photographer;
     });
 };
 
-getPhotographer();
-
 async function getPhotographerProfileCard() {
-  const photographerData = getPhotographer();
-  console.log("photographerData", photographerData);
+  const photographerData = await getPhotographer();
+  /*console.log("photographerData", photographerData);*/
+  const { name, city, country, tagline, portrait, price } = photographerData;
 
-  /*const { name, city, country, tagline, portrait } = photographerData;
-
-  document.querySelector(".photographer__main__header__name").innerHTML = name;
-  document.querySelector(
+  const inputName = document.querySelector(".photographer__main__header__name");
+  inputName.innerHTML = name;
+  /*inputName.setAttribute("aria-label", name);*/
+  const inputLocation = document.querySelector(
     ".photographer__main__header__location"
-  ).innerHTML = `${city}, ${country}`;
-  document.querySelector(
+  );
+  inputLocation.innerHTML = `${city}, ${country}`;
+  /*inputLocation.setAttribute("aria-label", `${city}, ${country}`);*/
+  const inputTagline = document.querySelector(
     ".photographer__main__header__tagline"
-  ).textContent = `${tagline}`;
-  const picture = `photos/photographers_portraits/${portrait}`;
-  document
-    .querySelector(".photographer__main__header__picture")
-    .setAttribute("src", picture);*/
+  );
+  inputTagline.textContent = `${tagline}`;
+  const picture = `assets/photos/photographers_portraits/${portrait}`;
+  const inputPicture = document.querySelector(
+    ".photographer__main__header__picture"
+  );
+  inputPicture.setAttribute("src", picture);
+  inputPicture.setAttribute("alt", "photo du photographe" + name);
+
+  const inputTitle = document.querySelector("title");
+  inputTitle.textContent = "Fisheye - " + name;
+
+  const inputPrice = document.querySelector(".photographer__main__tag__price");
+  inputPrice.textContent = price + "€/jour";
+
+  const inputModalName = document.querySelector(".modal__header__name");
+  inputModalName.textContent = name;
 }
 
 getPhotographerProfileCard();
-
-/*async function init() {
-  // Récupère les datas des photographes
-  const photographer = await getPhotographer();
-  console.log("photographer", photographer); //la const de l'objet photographers appelle getphotographers
-  DisplayDataProfileCard(photographer); // intègre la data à display photographer
-}
-
-init();*/

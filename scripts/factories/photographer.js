@@ -2,41 +2,49 @@ function photographerFactory(photographer) {
   // traitement de la data
   const { name, portrait, city, country, tagline, price, id } = photographer;
 
-  const picture = `photos/photographers_portraits/${portrait}`; //lien photo de profil de la data
+  const picture = `assets/photos/photographers_portraits/${portrait}`; //lien photo de profil de la data
 
   function getUserCardDOM() {
-    const listElement = document.createElement("ul");
-    listElement.classList.add("photographer__section__ul");
-
     const liElement = document.createElement("li"); // crée l'élément article
+    liElement.setAttribute("aria-label", "fiche du photographe " + name);
     liElement.classList.add("photographer__section__ul__li");
 
     const linkElement = document.createElement("a");
     linkElement.setAttribute("href", `./photographer.html?id=${id}`);
+    linkElement.setAttribute("aria-label", "lien vers la page du photographe");
     linkElement.classList.add("photographer__section__ul__li__a");
 
     const img = document.createElement("img"); // crée l'élément image
     img.setAttribute("src", picture); //attribute de l'image de la data
+    img.setAttribute("alt", "portrait du photographe " + name);
     img.classList.add("photographer__section__ul__li__a__picture");
 
     const h2 = document.createElement("h2"); //crée l'élément le titre h2
     h2.textContent = name; //done le contenu élement name de data
+    h2.setAttribute("aria-label", name);
     h2.classList.add("photographer__section__ul__li__a__name");
-    h2.ariaLabel = "nom du photographe";
 
     const locationElement = document.createElement("p");
     locationElement.textContent = `${city}, ${country}`;
+    locationElement.setAttribute(
+      "aria-label",
+      "localisation du photographe" + `${city}, ${country}`
+    );
     locationElement.classList.add("photographer__section__ul__li__location");
 
     const taglineElement = document.createElement("p");
     taglineElement.textContent = tagline;
+    taglineElement.setAttribute("aria-label", "tagline");
     taglineElement.classList.add("photographer__section__ul__li__tagline");
 
     const priceElement = document.createElement("p");
     priceElement.textContent = price + "€/jour";
+    priceElement.setAttribute(
+      "arialabel",
+      "Le tarif du photographe à la journée." + price + "€/jour"
+    );
     priceElement.classList.add("photographer__section__ul__li__price");
 
-    listElement.appendChild(liElement);
     liElement.appendChild(linkElement);
     linkElement.appendChild(img); // créer un enfant d'article : image
     linkElement.appendChild(h2); // créer un enfant d'article : image
@@ -44,7 +52,7 @@ function photographerFactory(photographer) {
     liElement.appendChild(taglineElement);
     liElement.appendChild(priceElement);
 
-    return listElement; // retoune donnée article
+    return liElement; // retoune donnée article
   }
 
   return { name, picture, getUserCardDOM }; //retourne création élement

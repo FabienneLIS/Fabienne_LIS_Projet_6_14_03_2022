@@ -12,68 +12,113 @@
       href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
       rel="stylesheet"
     />
-    <title>Fisheye - photographe</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <title></title>
   </head>
   <body>
-    <header>
-      <a href="index.html">
-        <img src="assets/images/logo.png" class="logo" />
-      </a>
-    </header>
+    <main class="main-page" aria-hidden="false">
+      <header>
+        <a href="index.html">
+          <img
+            src="assets/images/logo.png"
+            class="logo"
+            alt="logo de Fisheye"
+          />
+        </a>
+      </header>
 
-    <main id="main" class="photographer__main">
-      <div class="photographer__main__header">
-        <div>
-          <h2 class="photographer__main__header__name"></h2>
-          <p class="photographer__main__header__location"></p>
-          <p class="photographer__main__header__tagline"></p>
+      <div id="main" class="photographer__main">
+        <div
+          class="photographer__main__header"
+          aria-label="Fiche de description du photographe"
+        >
+          <div>
+            <h2 class="photographer__main__header__name"></h2>
+            <p class="photographer__main__header__location"></p>
+            <p class="photographer__main__header__tagline"></p>
+          </div>
+          <div>
+            <button
+              class="photographer__main__header__contactButton"
+              aria-haspopup="dialog"
+              aria-controls="dialog"
+            >
+              Contactez-moi
+            </button>
+          </div>
+          <div>
+            <img class="photographer__main__header__picture" src="" alt="" />
+          </div>
         </div>
-        <div>
-          <button class="photographer__main__header__contactButton">
-            Contactez-moi
-          </button>
-        </div>
-        <div>
-          <img class="photographer__main__header__picture" src="" alt="" />
-        </div>
+
+        <section class="photographer__main__gallery">
+          <p class="photographer__main__gallery__select">Trier par</p>
+          <ul class="photographer__main__gallery__ul"></ul>
+        </section>
+
+        <section class="photographer__main__tag">
+          <div class="photographer__main__tag__likes">
+            <p class="photographer__main__tag__likes__number">67</p>
+            <i class="photographer__main__tag__likes__icon fas fa-heart"></i>
+          </div>
+          <div>
+            <p class="photographer__main__tag__price"></p>
+          </div>
+        </section>
       </div>
-
-      <section class="photographer__main__gallery">
-        <p class="photographer__main__gallery__select">Trier par</p>
-        <section class="photographer__main__gallery__media"></section>
-      </section>
     </main>
 
-    <div id="contact_modal" class="contact_modal">
-      <div class="modal">
+    <div
+      id="contact_modal"
+      role="dialog"
+      aria-describedby="modal--title"
+      aria-modal="true"
+      aria-hidden="true"
+      class="contact_modal"
+    >
+      <span class="contact_modal--aria" aria-hidden="true"></span>
+      <div role="document" class="modal">
         <header class="modal_header">
-          <h2 class="modal_header-contactName">
+          <h2 class="modal_header-contactName" id="modal--title">
             <p>Contactez-moi</p>
-            <p>Mimi Keel</p>
+            <p class="modal__header__name"></p>
           </h2>
-          <img class="modal_header-close" src="assets/icons/close.svg" />
+          <img
+            aria-label="Fermer"
+            title="Fermer cette fenêtre modale."
+            class="modal_header-close"
+            src="assets/icons/close.svg"
+          />
+          <span class="modal_header-text"
+            >formulaire pour contacter le photographer</span
+          >
         </header>
 
         <form>
           <div>
-            <label>Prénom</label>
-            <input type="texte" name="" class="firstName" id="" />
+            <label for="name">Prénom</label>
+            <input type="texte" name="" class="firstName" id="name" />
           </div>
           <span class="error-text errorFirstName"></span>
           <div>
-            <label>Nom</label>
-            <input type="texte" name="" class="lastName" id="" />
+            <label for="lastName">Nom</label>
+            <input type="texte" name="" class="lastName" id="lastName" />
           </div>
           <span class="error-text errorLastName"></span>
           <div>
-            <label>Email</label>
-            <input type="email" class="email" name="" id="" />
+            <label for="email">Email</label>
+            <input type="email" class="email" name="" id="email" />
           </div>
           <span class="error-text errorEmail"></span>
           <span></span>
           <div>
-            <label>Votre message</label>
-            <textarea name="" id=""></textarea>
+            <label for="message">Votre message</label>
+            <textarea name="" id="message"></textarea>
           </div>
 
           <button class="contact_button">Envoyer</button>

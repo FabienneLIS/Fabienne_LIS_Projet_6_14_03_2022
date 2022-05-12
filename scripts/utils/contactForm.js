@@ -1,18 +1,30 @@
 //open modal
 const openModal = document.querySelector(
   ".photographer__main__header__contactButton"
-); /*button*/
-const modalForm = document.querySelector(".contact_modal"); /*modal*/
+);
+//body
+const mainpage = document.querySelector(".main-page");
+//button
+const modalForm = document.querySelector(".contact_modal");
 
-openModal.addEventListener("click", () => {
-  modalForm.style.display = "block";
+//modal
+/*const open = function inputOpenModal {
+  
+}*/
+openModal.addEventListener("click", (event) => {
+  event.preventDefault();
+  mainpage.setAttribute("aria-hidden", true);
+  openModal.setAttribute("aria-hidden", false);
+
+  openModal.focus();
+  /*modalForm.style.display = "block";*/
 });
 
 //closeModal
 const closeModal = document.querySelector(".modal_header-close");
 
 closeModal.addEventListener("click", () => {
-  modalForm.style.display = "none";
+  /*modalForm.style.display = "none";*/
 });
 
 //Nom prénom
@@ -38,6 +50,7 @@ function inputFirstName() {
     firstName.classList.add("valid-input");
     firstName.classList.remove("error-input");
     inputErrorFirstName.innerText = "";
+    console.log("firstName", firstName.value);
     return true;
   } else {
     firstName.classList.add("error-input");
@@ -61,6 +74,7 @@ function inputLastName() {
     lastName.classList.add("valid-input");
     lastName.classList.remove("error-input");
     inputErrorLastName.innerText = "";
+    console.log("lastName", lastName.value);
     return true;
   } else {
     lastName.classList.add("error-input");
@@ -80,6 +94,7 @@ function validatedEmail() {
     inputEmail.classList.add("valid-input");
     inputEmail.classList.remove("error-input");
     inputErrorEmail.innerText = "";
+    console.log("inputemail", inputEmail.value);
     return true;
   } else {
     inputEmail.classList.add("error-input");

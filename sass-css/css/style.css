@@ -26,10 +26,10 @@ body {
   margin-right: 100px;
 }
 
-.photographer__section {
+.photographer__section .photographer__section__ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 60px 20px;
   width: 100%;
   height: auto;

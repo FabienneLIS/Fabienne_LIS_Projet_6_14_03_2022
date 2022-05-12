@@ -1,9 +1,14 @@
 #contact_modal {
-  display: none;
+  /*display: none;*/
+  visibility: hidden;
+  opacity: 0;
 }
 
 body {
   font-family: "DM Sans", sans-serif;
+  width: auto;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 h2,
 p {
@@ -16,11 +21,13 @@ header {
     margin-bottom: 50px;
   }
 }
-
+.photographer__main {
+  margin-bottom: 10%;
+}
 .photographer__main__header {
   background-color: #fafafa;
   height: 300px;
-  margin: 0 100px;
+  padding: 50px;
   color: #901c1c;
   display: flex;
   flex-direction: row;
@@ -29,10 +36,19 @@ header {
   .photographer__main__header__name {
     color: #d3573c;
     font-size: 4em;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   .photographer__main__header__location {
-    font-size: 20px;
+    font-size: 2em;
     color: darken(#d3573c, 20%);
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .photographer__main__header__tagline {
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
   .photographer__main__header__contactButton {
     font-size: 20px;
@@ -56,14 +72,6 @@ header {
     object-fit: cover;
     background-size: cover;
   }
-  h2 {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  p {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
 }
 
 //photos, vidéos
@@ -80,39 +88,46 @@ header {
     margin-bottom: 5%;
   }
 }
-.photographer__main__gallery__media {
+
+.photographer__main__gallery__ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  column-gap: 2em;
+  grid-template-columns: 31.25rem 31.25rem 31.25rem;
+  grid-template-rows: repeat(530px);
+  column-gap: 6em;
   row-gap: 3em;
+  justify-content: center;
   justify-items: center;
   align-items: center;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0px;
   overflow: hidden;
-
-  .photographer__main__gallery__media__items {
-    .gallery__media__items__photo {
+  .photographer__main__gallery__ul__li {
+    list-style-type: none;
+    .photographer__main__gallery__ul__li__Media {
       height: 500px;
       width: 500px;
       object-fit: cover;
       overflow: hidden;
+      justify-items: center;
+      align-items: center;
     }
-    .gallery__media__items__legend {
+    .photographer__main__gallery__ul__li__legend {
       display: grid;
-      grid-template-columns: 4fr 2fr 1fr;
+      grid-template-columns: 10fr 1fr 1fr;
       align-items: start;
       justify-content: space-between;
+      height: 30px;
       margin-top: 10px;
       margin-bottom: 10px;
-      .gallery__media__items__legend__text {
+      .photographer__main__gallery__ul__li__legend__title {
         font-size: 1.2em;
         letter-spacing: 3px;
-        margin-top: 0px;
-        margin-bottom: 0px;
         color: #901c1c;
+        margin-top: 0px;
       }
-      .gallery__media__items__legend__number {
+      .photographer__main__gallery__ul__li__legend__numberLikes {
         justify-self: right;
         font-size: 1.2em;
         letter-spacing: 2px;
@@ -120,23 +135,17 @@ header {
         margin-bottom: 0px;
         color: #901c1c;
       }
-      .gallery__media__items__legend__like {
+      .photographer__main__gallery__ul__li__legend__iconLikes {
         position: relative;
-        justify-self: center;
-        align-self: center;
-        top: 0px;
-        left: 36%;
+        text-align: center;
         font-size: 24px;
-        width: 30px;
-        height: 30px;
-        margin-top: 0 px;
-        margin-bottom: 0px;
+        bottom: 2px;
         color: #901c1c;
         cursor: pointer;
         z-index: 1;
         animation: heart 1s forwards;
       }
-      .gallery__media__items__legend__liked {
+      /*.gallery__media__items__legend__liked {
         position: relative;
         top: 0px;
         right: 10%;
@@ -149,8 +158,40 @@ header {
         margin-top: 0 px;
         margin-bottom: 0px;
         z-index: -1;
-      }
+      }*/
     }
+  }
+}
+
+//tag
+.photographer__main__tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 32em;
+  height: 6em;
+  position: fixed;
+  bottom: 0;
+  right: 2em;
+  background-color: #db8876;
+  border-radius: 1em 1em 0em 0em;
+  z-index: 1;
+  .photographer__main__tag__likes {
+    display: flex;
+    flex-direction: row;
+    .photographer__main__tag__likes__number {
+      font-size: 2.2em;
+      font-weight: 700;
+    }
+    .photographer__main__tag__likes__icon {
+      font-size: 2.2em;
+      position: relative;
+      top: 1.1em;
+    }
+  }
+  .photographer__main__tag__price {
+    font-size: 2.2em;
+    font-weight: 700;
   }
 }
 
@@ -165,6 +206,7 @@ header {
   background-color: rgba(255, 255, 255, 0.745);
   height: 100vh;
   width: 100vw;
+  z-index: 2;
   .modal {
     border-radius: 5px;
     background-color: #db8876;
@@ -205,6 +247,9 @@ header {
     cursor: pointer;
     margin-left: 10px;
     margin-top: 14px;
+  }
+  .modal_header-text {
+    display: none;
   }
 }
 
