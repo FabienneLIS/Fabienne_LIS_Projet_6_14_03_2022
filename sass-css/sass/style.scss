@@ -20,7 +20,10 @@ body {
     width: 1800px;
   }
 }
-
+main a:hover,
+a:focus-visible {
+  outline-offset: 3px solid cyan;
+}
 .header {
   display: flex;
   flex-direction: row;
@@ -41,11 +44,12 @@ body {
 .photographer__section {
   .photographer__section__ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 30% 30% 30%;
     grid-template-rows: 1fr 1fr;
-    gap: 60px 20px;
+    gap: 60px 5%;
     width: 100%;
     height: auto;
+    padding-left: 0px;
   }
 }
 
