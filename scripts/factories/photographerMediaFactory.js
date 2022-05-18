@@ -59,7 +59,7 @@ function photographerMediaCardFactory(media) {
 
     const iconLikes = document.createElement("div");
     iconLikes.innerHTML = '<i class="fas fa-heart"></i>';
-    iconLikes.setAttribute("role", button);
+    /*iconLikes.setAttribute("role", button);*/
     iconLikes.setAttribute("aria-label", "Bouton j'aime à cliquer");
     iconLikes.classList.add(
       "photographer__main__gallery__ul__li__legend__iconLikes"
