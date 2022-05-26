@@ -33,7 +33,6 @@ async function getPhotographerProfileCard() {
     ".photographer__main__header__location"
   );
   inputLocation.innerHTML = `${city}, ${country}`;
-  /*inputLocation.setAttribute("aria-label", `${city}, ${country}`);*/
   const inputTagline = document.querySelector(
     ".photographer__main__header__tagline"
   );

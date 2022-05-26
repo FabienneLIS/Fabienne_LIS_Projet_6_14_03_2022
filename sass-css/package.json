@@ -1,0 +1,11 @@
+{
+  "name": "projet6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "sass/style.scss css/style.css"
+  },
+  "author": "FabienneLIS",
+  "license": "ISC"
+}

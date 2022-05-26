@@ -23,50 +23,53 @@
   <body>
     <main class="main-page" aria-hidden="false">
       <header>
-        <a href="index.html">
+        <a href="index.html" tabindex="1">
           <img
             src="assets/images/logo.png"
             class="logo"
             alt="logo de Fisheye"
+            tabindex="1"
           />
         </a>
       </header>
 
-      <div id="main" class="photographer__main">
+      <div id="main" class="photographer__main" href="#photographer-profil">
         <div
           class="photographer__main__header"
-          aria-label="Fiche de description du photographe"
+          id="photographer-profil"
+          aria-label="Fiche de description du photographe" tabindex="1"
         >
           <div>
-            <h2 class="photographer__main__header__name"></h2>
-            <p class="photographer__main__header__location"></p>
-            <p class="photographer__main__header__tagline"></p>
+            <h2 class="photographer__main__header__name" tabindex="1"></h2>
+            <p class="photographer__main__header__location" tabindex="1"></p>
+            <p class="photographer__main__header__tagline" tabindex="1"></p>
           </div>
           <div>
             <button
               class="photographer__main__header__contactButton"
               role="button"
+              tabindex="1"
             >
               Contactez-moi
             </button>
           </div>
           <div>
-            <img class="photographer__main__header__picture" src="" alt="" />
+            <img class="photographer__main__header__picture" src="" alt="" tabindex="1" />
           </div>
         </div>
 
-        <section class="photographer__main__gallery">
-          <p class="photographer__main__gallery__select">Trier par</p>
-          <ul class="photographer__main__gallery__ul"></ul>
+        <section class="photographer__main__gallery" tabindex="1">
+          <p class="photographer__main__gallery__select" tabindex="1">Trier par</p>
+          <ul class="photographer__main__gallery__ul" tabindex="1"></ul>
         </section>
 
-        <section class="photographer__main__tag">
+        <section class="photographer__main__tag" tabindex="1">
           <div class="photographer__main__tag__likes">
-            <p class="photographer__main__tag__likes__number">67</p>
-            <i class="photographer__main__tag__likes__icon fas fa-heart"></i>
+            <p class="photographer__main__tag__likes__number" tabindex="1">67</p>
+            <i class="photographer__main__tag__likes__icon fas fa-heart" tabindex="1"></i>
           </div>
           <div>
-            <p class="photographer__main__tag__price"></p>
+            <p class="photographer__main__tag__price" tabindex="1"></p>
           </div>
         </section>
       </div>
@@ -79,20 +82,25 @@
       aria-modal="true"
       aria-hidden="true"
       class="contact_modal"
+      tabindex="1"
     >
       <span class="contact_modal--aria" aria-hidden="true"></span>
       <div role="document" class="modal">
         <header class="modal_header">
           <h2 class="modal_header-contactName" id="modal--title">
-            <p>Contactez-moi</p>
-            <p class="modal__header__name"></p>
+            <p tabindex="1">Contactez-moi</p>
+            <p class="modal__header__name" tabindex="1"></p>
           </h2>
-          <img
+          <button>
+            <img
             aria-label="Fermer"
             title="Fermer cette fenêtre modale."
             class="modal_header-close"
             src="assets/icons/close.svg"
+            tabindex="1"
           />
+          </button>
+          
           <span class="modal_header-text"
             >formulaire pour contacter le photographer</span
           >
@@ -100,27 +108,27 @@
 
         <form>
           <div>
-            <label for="name">Prénom</label>
-            <input type="texte" name="" class="firstName" id="name" />
+            <label for="firstname">Prénom</label>
+            <input type="texte" name="" class="firstName" id="firstname"  tabindex="1"/>
           </div>
-          <span class="error-text errorFirstName"></span>
+          <span class="error-text errorFirstName" tabindex="1"></span>
           <div>
             <label for="lastName">Nom</label>
-            <input type="texte" name="" class="lastName" id="lastName" />
+            <input type="texte" name="" class="lastName" id="lastName" tabindex="1"/>
           </div>
-          <span class="error-text errorLastName"></span>
+          <span class="error-text errorLastName" tabindex="1"></span>
           <div>
             <label for="email">Email</label>
-            <input type="email" class="email" name="" id="email" />
+            <input type="email" class="email" name="" id="email" tabindex="1"/>
           </div>
-          <span class="error-text errorEmail"></span>
+          <span class="error-text errorEmail" tabindex="1"></span>
           <span></span>
           <div>
             <label for="message">Votre message</label>
-            <textarea name="" id="message"></textarea>
+            <textarea name="" id="message" tabindex="1"></textarea>
           </div>
 
-          <button class="contact_button">Envoyer</button>
+          <button class="contact_button" tabindex="1">Envoyer</button>
         </form>
       </div>
     </div>

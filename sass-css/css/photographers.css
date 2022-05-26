@@ -1,7 +1,7 @@
 #contact_modal {
-  /*display: none;*/
-  visibility: hidden;
-  opacity: 0;
+  display: none;
+ /* visibility: hidden;
+  opacity: 0;*/
 }
 
 body {
@@ -123,20 +123,6 @@ header img {
   height: 30px;
   margin-top: 10px;
   margin-bottom: 10px;
-  /*.gallery__media__items__legend__liked {
-    position: relative;
-    top: 0px;
-    right: 10%;
-    font-size: 24px;
-    width: 40px;
-    height: 30px;
-    color: transparent;
-    background-clip: text;
-    background-color: #db8876;
-    margin-top: 0 px;
-    margin-bottom: 0px;
-    z-index: -1;
-  }*/
 }
 .photographer__main__gallery__ul .photographer__main__gallery__ul__li .photographer__main__gallery__ul__li__legend .photographer__main__gallery__ul__li__legend__title {
   font-size: 1.2em;
@@ -161,6 +147,8 @@ header img {
   cursor: pointer;
   z-index: 1;
   animation: heart 1s forwards;
+  background-color: white;
+  border: none;
 }
 
 .photographer__main__tag {
@@ -246,6 +234,8 @@ header img {
   cursor: pointer;
   margin-left: 10px;
   margin-top: 14px;
+  background-color: #db8876;
+  border: none;
 }
 .modal_header .modal_header-text {
   display: none;
@@ -318,5 +308,3 @@ form div textarea {
   border-radius: 5px;
   cursor: pointer;
 }
-
-/*# sourceMappingURL=photographers.css.map */

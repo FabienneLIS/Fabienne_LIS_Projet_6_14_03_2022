@@ -11,20 +11,27 @@ const modalForm = document.querySelector(".contact_modal");
 /*const open = function inputOpenModal {
   
 }*/
-openModal.addEventListener("click", (event) => {
-  event.preventDefault();
+openModal.addEventListener("click", () => {
+  /*event.preventDefault();
   mainpage.setAttribute("aria-hidden", true);
   openModal.setAttribute("aria-hidden", false);
 
-  openModal.focus();
-  /*modalForm.style.display = "block";*/
+  openModal.focus();*/
+  /*mainpage.setAttribute("aria-hidden", true);*/
+  /*mainpage.style.visibility = "hidden";*/
+  modalForm.style.display = "block";
+  modalForm.focus()
 });
 
 //closeModal
 const closeModal = document.querySelector(".modal_header-close");
 
-closeModal.addEventListener("click", () => {
-  /*modalForm.style.display = "none";*/
+closeModal.addEventListener("click", (event) => {
+  event.preventDefault()
+  modalForm.style.display = "none";
+  closeModal.focus()
+  /*mainpage.style.visibility = "none";*/
+  /*mainpage.setAttribute("aria-hidden", false);*/
 });
 
 //Nom prénom

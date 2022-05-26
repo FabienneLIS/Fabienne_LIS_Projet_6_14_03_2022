@@ -16,9 +16,6 @@ $breakpointsmax: (
 body {
   font-family: "DM Sans", sans-serif;
   margin: 0;
-  @include max-only {
-    width: 1800px;
-  }
 }
 main a:hover,
 a:focus-visible {
@@ -31,17 +28,22 @@ a:focus-visible {
   align-items: center;
   height: 90px;
   margin-bottom: 5%;
-  .header__logo {
-    height: 50px;
-    margin-left: 100px;
-  }
-  .header__photographes {
-    color: #901c1c;
-    margin-right: 100px;
+}
+
+.header__logo {
+  height: 50px;
+  margin-left: 100px;
+}
+
+.header__photographes {
+  color: #901c1c;
+  margin-right: 100px;
+  &:focus, :hover {
+    border: #901c1c 1px solid;
   }
 }
 
-.photographer__section {
+
   .photographer__section__ul {
     display: grid;
     grid-template-columns: 30% 30% 30%;
@@ -51,7 +53,6 @@ a:focus-visible {
     height: auto;
     padding-left: 0px;
   }
-}
 
 .photographer__section__ul__li {
   text-decoration: none;
@@ -61,21 +62,22 @@ a:focus-visible {
   align-items: center;
   flex-direction: column;
 }
+
 .photographer__section__ul__li__a {
   text-decoration: none;
   text-align: center;
   cursor: pointer;
-  .photographer__section__ul__li__a__picture {
-    height: 18em;
-    width: 18em;
-    border-radius: 10em;
-    object-fit: cover;
-    background-size: cover;
-  }
-  .photographer__section__ul__li__a__name {
-    color: #d3573c;
-    font-size: 40px;
-  }
+}
+.photographer__section__ul__li__a__picture {
+  height: 18em;
+  width: 18em;
+  border-radius: 10em;
+  object-fit: cover;
+  background-size: cover;
+}
+.photographer__section__ul__li__a__name {
+  color: #d3573c;
+  font-size: 40px;
 }
 .photographer__section__ul__li__location {
   font-size: 18px;

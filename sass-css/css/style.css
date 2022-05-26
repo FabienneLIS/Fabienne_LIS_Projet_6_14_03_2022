@@ -1,19 +1,12 @@
-@import url("photographer.css");
+
 body {
   font-family: "DM Sans", sans-serif;
   margin: 0;
 }
-@media screen and (max-width: 1800px) {
-  body {
-    width: 1800px;
-  }
-}
-
 main a:hover,
 a:focus-visible {
   outline-offset: 3px solid cyan;
 }
-
 .header {
   display: flex;
   flex-direction: row;
@@ -22,24 +15,30 @@ a:focus-visible {
   height: 90px;
   margin-bottom: 5%;
 }
-.header .header__logo {
+
+.header__logo {
   height: 50px;
   margin-left: 100px;
 }
-.header .header__photographes {
+
+.header__photographes {
   color: #901c1c;
   margin-right: 100px;
+
+}
+.header__photographes :focus, :hover {
+  border: #901c1c 1px solid;
 }
 
-.photographer__section .photographer__section__ul {
-  display: grid;
-  grid-template-columns: 30% 30% 30%;
-  grid-template-rows: 1fr 1fr;
-  gap: 60px 5%;
-  width: 100%;
-  height: auto;
-  padding-left: 0px;
-}
+  .photographer__section__ul {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 1fr 1fr;
+    gap: 60px 5%;
+    width: 100%;
+    height: auto;
+    padding-left: 0px;
+  }
 
 .photographer__section__ul__li {
   text-decoration: none;
@@ -49,45 +48,42 @@ a:focus-visible {
   align-items: center;
   flex-direction: column;
 }
+.photographer__section__ul__li :focus, :hover {
+  border: #901c1c 1px solid;
+}
 
 .photographer__section__ul__li__a {
   text-decoration: none;
   text-align: center;
   cursor: pointer;
 }
-.photographer__section__ul__li__a .photographer__section__ul__li__a__picture {
+.photographer__section__ul__li__a__picture {
   height: 18em;
   width: 18em;
   border-radius: 10em;
   object-fit: cover;
   background-size: cover;
 }
-.photographer__section__ul__li__a .photographer__section__ul__li__a__name {
+.photographer__section__ul__li__a__name {
   color: #d3573c;
   font-size: 40px;
 }
-
 .photographer__section__ul__li__location {
   font-size: 18px;
-  color: #8a321f;
+  color: darken(#d3573c, 20%);
 }
-
 .photographer__section__ul__li__tagline {
   font-weight: bold;
 }
-
 .photographer__section__ul__li__price {
-  color: #555555;
+  color: rgb(85, 85, 85);
 }
-
 h2 {
   margin-top: 2px;
   margin-bottom: 2px;
 }
-
 p {
   margin-top: 2px;
   margin-bottom: 2px;
 }
-
 /*# sourceMappingURL=style.css.map */
