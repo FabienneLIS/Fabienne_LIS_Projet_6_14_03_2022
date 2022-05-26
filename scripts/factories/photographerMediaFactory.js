@@ -2,6 +2,7 @@ function createImageDomElement(src, title) {
   const imageElement = document.createElement("img");
   imageElement.setAttribute("src", src);
   imageElement.setAttribute("alt", title);
+  imageElement.setAttribute("tabindex", 2);
   imageElement.classList.add("photographer__main__gallery__ul__li__Media");
 
   return imageElement;
@@ -12,6 +13,7 @@ function createVideoDomElement(src, title) {
   /*videoElement.setAttribute("width", "500px");
   videoElement.setAttribute("height", "500px");*/
   videoElement.setAttribute("controls", true);
+  videoElement.setAttribute("tabindex", 2);
   videoElement.setAttribute("src", src);
   videoElement.classList.add("photographer__main__gallery__ul__li__Media");
 
@@ -31,6 +33,7 @@ function photographerMediaCardFactory(media) {
       "aria-label",
       "Liste des photos et vidéos du photographe"
     );
+    list.setAttribute("tabindex", -1);
 
     let media = null;
     if (image) {
@@ -46,6 +49,7 @@ function photographerMediaCardFactory(media) {
 
     const titleMedia = document.createElement("p");
     titleMedia.textContent = title;
+    titleMedia.setAttribute("tabindex", 2);
     titleMedia.classList.add(
       "photographer__main__gallery__ul__li__legend__title"
     );
@@ -53,14 +57,15 @@ function photographerMediaCardFactory(media) {
     const likesNumber = document.createElement("p");
     likesNumber.textContent = likes;
     likesNumber.setAttribute("aria-label", "nombre de j'aime " + likes);
+    likesNumber.setAttribute("tabindex", 2);
     likesNumber.classList.add(
       "photographer__main__gallery__ul__li__legend__numberLikes"
     );
 
-    const iconLikes = document.createElement("div");
+    const iconLikes = document.createElement("button");
     iconLikes.innerHTML = '<i class="fas fa-heart"></i>';
-    iconLikes.setAttribute("role", "button");
-    iconLikes.setAttribute("aria-label", "icone");
+    iconLikes.setAttribute("aria-label", "Cliquez pour liker la photo.");
+    iconLikes.setAttribute("tabindex", 2);
     iconLikes.classList.add(
       "photographer__main__gallery__ul__li__legend__iconLikes"
     );
