@@ -1,0 +1,41 @@
+//tag
+.photographer__main__tag {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 28em;
+    height: 30px;
+    position: fixed;
+    padding: 20px;
+    bottom: 0;
+    right: 2em;
+    background-color: #db8876;
+    border-radius: 1em 1em 0em 0em;
+    z-index: 1;
+  }
+  .photographer__main__tag__likes {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+  .photographer__main__tag__likes__number {
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 10px;
+  }
+  .photographer__main__tag__likes__icon {
+    font-size: 2em;
+    position: relative;
+    top: 0.1em;
+  }
+  .photographer__main__tag__contenPrice {
+    width: auto;
+  }
+  .photographer__main__tag__price {
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }

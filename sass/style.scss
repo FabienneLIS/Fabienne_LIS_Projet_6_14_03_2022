@@ -1,0 +1,99 @@
+@import url("photographer.css");
+
+//média queries
+$breakpointsmax: (
+  max: 1800px,
+);
+
+@mixin max-only {
+  @media screen and (max-width: map-get($breakpointsmax, max)) {
+    @content;
+  }
+}
+
+//page
+
+body {
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+}
+main a:hover,
+a:focus-visible {
+  outline-offset: 3px solid cyan;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  margin-bottom: 5%;
+}
+
+.header__logo {
+  height: 50px;
+  margin-left: 100px;
+}
+
+.header__photographes {
+  color: #901c1c;
+  margin-right: 100px;
+  &:focus, :hover {
+    border: #901c1c 1px solid;
+  }
+}
+
+
+  .photographer__section__ul {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 1fr 1fr;
+    gap: 60px 5%;
+    width: 100%;
+    height: auto;
+    padding-left: 0px;
+  }
+
+.photographer__section__ul__li {
+  text-decoration: none;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.photographer__section__ul__li__a {
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+.photographer__section__ul__li__a__picture {
+  height: 18em;
+  width: 18em;
+  border-radius: 10em;
+  object-fit: cover;
+  background-size: cover;
+}
+.photographer__section__ul__li__a__name {
+  color: #d3573c;
+  font-size: 40px;
+}
+.photographer__section__ul__li__location {
+  font-size: 18px;
+  color: darken(#d3573c, 20%);
+}
+.photographer__section__ul__li__tagline {
+  font-weight: bold;
+}
+.photographer__section__ul__li__price {
+  color: rgb(85, 85, 85);
+}
+h2 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}

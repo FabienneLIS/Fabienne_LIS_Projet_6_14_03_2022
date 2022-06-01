@@ -2,11 +2,12 @@
 <html lang="fr">
   <head>
     <link
-      href="sass-css/css/photographers.css"
+      href="sass-css/sass/photographers.css"
       rel="stylesheet"
       type="text/css"
     />
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
@@ -21,7 +22,7 @@
     <title></title>
   </head>
   <body>
-    <main class="main-page" aria-hidden="false">
+    <main class="main-page">
       <header>
         <a href="index.html" tabindex="1">
           <img
@@ -39,12 +40,12 @@
           id="photographer-profil"
           aria-label="Fiche de description du photographe" tabindex="1"
         >
-          <div>
+          <div class="photographer__main__header--content">
             <h2 class="photographer__main__header__name" tabindex="1"></h2>
             <p class="photographer__main__header__location" tabindex="1"></p>
             <p class="photographer__main__header__tagline" tabindex="1"></p>
           </div>
-          <div>
+          <div class="photographer__main__header--content">
             <button
               class="photographer__main__header__contactButton"
               role="button"
@@ -53,7 +54,7 @@
               Contactez-moi
             </button>
           </div>
-          <div>
+          <div class="photographer__main__header--content">
             <img class="photographer__main__header__picture" src="" alt="" tabindex="1" />
           </div>
         </div>
@@ -65,10 +66,10 @@
 
         <section class="photographer__main__tag" tabindex="1">
           <div class="photographer__main__tag__likes">
-            <p class="photographer__main__tag__likes__number" tabindex="1">67</p>
+            <p class="photographer__main__tag__likes__number" tabindex="1">240 260</p>
             <i class="photographer__main__tag__likes__icon fas fa-heart" tabindex="1"></i>
           </div>
-          <div>
+          <div class="photographer__main__tag__contenPrice">
             <p class="photographer__main__tag__price" tabindex="1"></p>
           </div>
         </section>
@@ -80,7 +81,6 @@
       role="dialog"
       aria-describedby="modal--title"
       aria-modal="true"
-      aria-hidden="true"
       class="contact_modal"
       tabindex="1"
     >
@@ -91,13 +91,12 @@
             <p tabindex="1">Contactez-moi</p>
             <p class="modal__header__name" tabindex="1"></p>
           </h2>
-          <button>
+          <button class="modal_header__buttonClose" tabindex="1">
             <img
             aria-label="Fermer"
             title="Fermer cette fenêtre modale."
             class="modal_header-close"
-            src="assets/icons/close.svg"
-            tabindex="1"
+            src="assets/icons/close.svg" 
           />
           </button>
           
@@ -109,29 +108,42 @@
         <form>
           <div>
             <label for="firstname">Prénom</label>
-            <input type="texte" name="" class="firstName" id="firstname"  tabindex="1"/>
+            <input type="texte" class="firstName" id="firstname"  tabindex="1"/>
           </div>
           <span class="error-text errorFirstName" tabindex="1"></span>
           <div>
             <label for="lastName">Nom</label>
-            <input type="texte" name="" class="lastName" id="lastName" tabindex="1"/>
+            <input type="texte" class="lastName" id="lastName" tabindex="1"/>
           </div>
           <span class="error-text errorLastName" tabindex="1"></span>
           <div>
             <label for="email">Email</label>
-            <input type="email" class="email" name="" id="email" tabindex="1"/>
+            <input type="email" class="email" id="email" tabindex="1"/>
           </div>
           <span class="error-text errorEmail" tabindex="1"></span>
           <span></span>
           <div>
             <label for="message">Votre message</label>
-            <textarea name="" id="message" tabindex="1"></textarea>
+            <textarea class="textarea" id="message" tabindex="1"></textarea>
           </div>
+          <span class="error-text errorTextarea" tabindex="1"></span>
 
           <button class="contact_button" tabindex="1">Envoyer</button>
         </form>
       </div>
     </div>
+
+      <!--ligthbox-modal-->
+      <div class="lightbox">
+        <button class="lightbox__close" aria-label="fermer la ligthbox-modal"><i class="fas fa-times lightbox__close--image"></i></button>
+       <button class="lightbox__left"><i class="fas fa-angle-left lightbox__left--i"></i></button>
+       <div class="lightbox__picture">
+        <img  src="" alt="">
+        <video src=""></video>
+       </div>
+        
+        <button class="lightbox__right"><i class="fas fa-angle-right lightbox__right--i"></i></button>
+      </div>
     <script src="scripts/pages/photographerProfileCard.js"></script>
     <script src="scripts/factories/photographerProfilCardFactory.js"></script>
     <script src="scripts/pages/photographerMedia.js"></script>
