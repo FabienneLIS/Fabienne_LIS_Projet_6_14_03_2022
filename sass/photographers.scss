@@ -1,0 +1,241 @@
+@import "./photographers-layouts/form";
+@import "./photographers-layouts/tag";
+
+body {
+  font-family: "DM Sans", sans-serif;
+  width: auto;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+h2,
+p {
+  color: black;
+}
+
+
+.logo {
+  font-size: 5em;
+  margin-bottom: 50px;
+  :hover {
+    background-color: #db8876;
+  }
+}
+
+.photographer__main {
+  margin-bottom: 4%;
+}
+.photographer__main__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  width: 94%;
+  height: 300px;
+  padding: 3%;
+  color: #901c1c;
+}
+ 
+.photographer__main__header--content {
+  width: auto;
+}
+  .photographer__main__header__name {
+    color: #d3573c;
+    font-size: 4em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .photographer__main__header__location {
+    font-size: 2em;
+    color: darken(#d3573c, 20%);
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }  
+.photographer__main__header__tagline {
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.photographer__main__header__contactButton {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 11px;
+  width: 170px;
+  height: 70px;
+  border: none;
+  background-color: #901c1c;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.photographer__main__header__picture {
+  height: 15em;
+  width: 15em;
+  border-radius: 10em;
+  object-fit: cover;
+  background-size: cover;
+}
+
+//photos, vidéos
+.photographer__main__gallery {
+  width: 100%;
+}
+.photographer__main__gallery__select {
+  width: auto;
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: 800;
+  color: black;
+  letter-spacing: 3px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.photographer__main__gallery__ul {
+  display: grid;
+  grid-template-columns: 31.25rem 31.25rem 31.25rem;
+  grid-template-rows: repeat(530px);
+  column-gap: 6em;
+  row-gap: 3em;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0px;
+  overflow: hidden;
+}
+.photographer__main__gallery__ul__li {
+  list-style-type: none;
+}
+.photographer__main__gallery__ul__li__Media {
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
+  overflow: hidden;
+  justify-items: center;
+  align-items: center;
+  :hover, :focus {
+    background-color: #db8876;
+  }
+}
+.photographer__main__gallery__ul__li__legend {
+  display: grid;
+  grid-template-columns: 10fr 1fr 1fr;
+  align-items: start;
+  justify-content: space-between;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  :hover, :focus {
+    background-color: #db8876;
+  }
+}
+.photographer__main__gallery__ul__li__legend__title {
+  font-size: 1.2em;
+  letter-spacing: 3px;
+  color: #901c1c;
+  margin-top: 0px;
+  :hover, :focus {
+    background-color: #db8876;
+  }
+}
+.photographer__main__gallery__ul__li__legend__numberLikes {
+  justify-self: right;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #901c1c;
+  :hover, :focus {
+    background-color: #db8876;
+  }
+}
+.photographer__main__gallery__ul__li__legend__iconLikes {
+  background-color: white;
+  border: none;
+  position: relative;
+  text-align: center;
+  font-size: 24px;
+  bottom: 2px;
+  color: #901c1c;
+  cursor: pointer;
+  z-index: 1;
+  animation: heart 1s forwards;
+  :hover, :focus {
+    background-color: #db8876;
+  }
+}
+
+//lightbox-form
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-origin: center;
+  background-color: #fafafa;
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+} 
+
+.lightbox__close {
+  position: fixed;
+  top: 5%;
+  right: 8%;
+  background-color: #fafafa;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.lightbox__close--image {
+  color: #901c1c;
+  font-size: 60px;
+}
+.lightbox__left {
+position: fixed;
+top: 50%;
+left: 6%;
+background-color: #fafafa;
+border: none;
+}
+
+.lightbox__left--i {
+  font-size: 80px;
+  height: auto;
+  color: #901c1c;
+  cursor: pointer;
+}
+.lightbox__right {
+position: fixed;
+top: 50%;
+right: 6%;
+background-color: #fafafa;
+border: none;
+}
+
+.lightbox__right--i {
+  font-size: 80px;;
+  height: auto;
+  color: #901c1c;
+  cursor: pointer;
+}
+
+.lightbox__picture {
+  background-color: aqua;
+  width: 70vw;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  img, video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

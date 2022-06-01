@@ -1,0 +1,117 @@
+@import url("photographer.css");
+body {
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+}
+
+main a:hover,
+a:focus-visible {
+  outline-offset: 3px solid cyan;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90px;
+  margin-bottom: 5%;
+}
+
+.header__logo {
+  height: 50px;
+  margin-left: 100px;
+}
+
+.header__photographes {
+  color: #901c1c;
+  margin-right: 100px;
+}
+
+.header__photographes:focus, .header__photographes :hover {
+  border: #901c1c 1px solid;
+}
+
+.photographer__section__ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 30% 30%;
+      grid-template-columns: 30% 30% 30%;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  gap: 60px 5%;
+  width: 100%;
+  height: auto;
+  padding-left: 0px;
+}
+
+.photographer__section__ul__li {
+  text-decoration: none;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.photographer__section__ul__li__a {
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.photographer__section__ul__li__a__picture {
+  height: 18em;
+  width: 18em;
+  border-radius: 10em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+}
+
+.photographer__section__ul__li__a__name {
+  color: #d3573c;
+  font-size: 40px;
+}
+
+.photographer__section__ul__li__location {
+  font-size: 18px;
+  color: #8a321f;
+}
+
+.photographer__section__ul__li__tagline {
+  font-weight: bold;
+}
+
+.photographer__section__ul__li__price {
+  color: #555555;
+}
+
+h2 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+/*# sourceMappingURL=style.css.map */
