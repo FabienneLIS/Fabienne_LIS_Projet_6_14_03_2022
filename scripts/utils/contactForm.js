@@ -12,26 +12,16 @@ const modalForm = document.querySelector(".contact_modal");
   
 }*/
 openModal.addEventListener("click", () => {
-  /*event.preventDefault();
-  mainpage.setAttribute("aria-hidden", true);
-  openModal.setAttribute("aria-hidden", false);
-
-  openModal.focus();*/
-  /*mainpage.setAttribute("aria-hidden", true);*/
-  /*mainpage.style.visibility = "hidden";*/
+ 
   modalForm.style.display = "block";
   modalForm.focus()
 });
 
 //closeModal
-const closeModal = document.querySelector(".modal_header-close");
+const closeModal = document.querySelector(".modal_header__buttonClose");
 
-closeModal.addEventListener("click", (event) => {
-  event.preventDefault()
+closeModal.addEventListener("click", () => {
   modalForm.style.display = "none";
-  closeModal.focus()
-  /*mainpage.style.visibility = "none";*/
-  /*mainpage.setAttribute("aria-hidden", false);*/
 });
 
 //Nom prénom
@@ -57,7 +47,6 @@ function inputFirstName() {
     firstName.classList.add("valid-input");
     firstName.classList.remove("error-input");
     inputErrorFirstName.innerText = "";
-    console.log("firstName", firstName.value);
     return true;
   } else {
     firstName.classList.add("error-input");
@@ -81,7 +70,6 @@ function inputLastName() {
     lastName.classList.add("valid-input");
     lastName.classList.remove("error-input");
     inputErrorLastName.innerText = "";
-    console.log("lastName", lastName.value);
     return true;
   } else {
     lastName.classList.add("error-input");
@@ -101,12 +89,51 @@ function validatedEmail() {
     inputEmail.classList.add("valid-input");
     inputEmail.classList.remove("error-input");
     inputErrorEmail.innerText = "";
-    console.log("inputemail", inputEmail.value);
     return true;
   } else {
     inputEmail.classList.add("error-input");
     inputEmail.classList.remove("valid-input");
     inputErrorEmail.innerText = "L'adresse mail n'est pas valide.";
     return false;
+  }
+}
+
+//textarea
+const inputTextarea = document.querySelector(".textarea");
+inputTextarea.addEventListener("change", validateTextarea);
+const inputErrorTextarea = document.querySelector(".errorTextarea");
+
+function validateTextarea() {
+  if (inputTextarea.value.length > 1 && inputTextarea.value.length < 2000) {
+    inputTextarea.classList.add("valid-input");
+    inputTextarea.classList.remove("error-input");
+  inputErrorTextarea.innerText = "";
+  return true;
+  } else {
+    inputTextarea.classList.add("error-input");
+    inputTextarea.classList.remove("valid-input");
+    inputErrorTextarea.innerText = "Vous devez remplir le champs.";
+  return false;
+  }
+}
+
+//validation formulaire
+const form = document.querySelector(".contact_button");
+form.addEventListener("click", submitForm);
+
+function submitForm(e) {
+  e.preventDefault();
+
+  if( inputFirstName() &&
+    inputLastName() &&
+    validatedEmail() && 
+    validateTextarea()) {
+      console.log("firstName", firstName.value);
+      console.log("lastName", lastName.value);
+      console.log("inputemail", inputEmail.value);
+      console.log("texarea", inputTextarea.value);
+      modalForm.style.display = "none";
+  } else {
+    return false
   }
 }
